@@ -1,3 +1,3 @@
-# ID Contact proto `id-contact-proto`
+# Verder Helpen proto `verder-helpen-proto`
 
-This package provides Rust structure definitions and (de)serialization code for the protocol messages used in the ID Contact communication plugin and authentication plugin interfaces.
+This package provides Rust structure definitions and (de)serialization code for the protocol messages used in the Verder Helpen Platform communication plugin and authentication plugin interfaces.
