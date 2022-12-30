@@ -1,7 +1,7 @@
-use std::collections::HashMap;
-
 use rocket::form::FromFormField;
 use serde::{Deserialize, Serialize};
+use std::collections::HashMap;
+use url::Url;
 
 /// Result status of authentication flow
 #[derive(Debug, Serialize, Deserialize, PartialEq, Eq, Clone)]
@@ -24,7 +24,7 @@ pub struct AuthResult {
     pub attributes: Option<HashMap<String, String>>,
     /// URL on which the authentication plugin wants to be kept updated on session status
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub session_url: Option<String>,
+    pub session_url: Option<Url>,
 }
 
 /// Session activity status update type

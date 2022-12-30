@@ -1,4 +1,5 @@
 use serde::{Deserialize, Serialize};
+use url::Url;
 
 pub type Tag = String;
 #[derive(Debug, Serialize, Deserialize)]
@@ -18,11 +19,11 @@ pub struct SessionOptions {
 pub struct StartRequestAuthOnly {
     pub purpose: String,
     pub auth_method: Tag,
-    pub comm_url: String,
-    pub attr_url: Option<String>,
+    pub comm_url: Url,
+    pub attr_url: Option<Url>,
 }
 
 #[derive(Debug, Deserialize, Serialize)]
 pub struct ClientUrlResponse {
-    pub client_url: String,
+    pub client_url: Url,
 }
