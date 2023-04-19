@@ -7,7 +7,8 @@ pub struct StartAuthRequest {
     pub attributes: Vec<String>,
     /// URL to which to redirect user after completion of authentication flow
     pub continuation: String,
-    /// URL to which authentication result will/should be sent after completion of authentication flow
+    /// URL to which authentication result will/should be sent after completion
+    /// of authentication flow
     #[serde(skip_serializing_if = "Option::is_none")]
     pub attr_url: Option<String>,
 }
