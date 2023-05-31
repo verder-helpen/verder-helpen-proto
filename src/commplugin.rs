@@ -1,7 +1,7 @@
 use serde::{Deserialize, Serialize};
 
 /// Data provided for a start_communication request
-#[derive(Debug, Serialize, Deserialize, PartialEq, Eq)]
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
 pub struct StartCommRequest {
     /// Purpose of the communication session
     pub purpose: String,
@@ -12,7 +12,7 @@ pub struct StartCommRequest {
 }
 
 /// Expected result for a start_communication request
-#[derive(Debug, Serialize, Deserialize, PartialEq, Eq)]
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
 pub struct StartCommResponse {
     /// URL for client to start communication process
     pub client_url: String,
