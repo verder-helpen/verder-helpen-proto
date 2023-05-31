@@ -30,7 +30,7 @@ pub struct AuthResult {
 }
 
 /// Session activity status update type
-#[derive(Debug, Serialize, Deserialize, PartialEq, Eq, FromFormField)]
+#[derive(Debug, Clone, Copy, Serialize, Deserialize, PartialEq, Eq, FromFormField)]
 pub enum SessionActivity {
     /// User has had sufficient activity to extend session timeout
     #[serde(rename = "user_active")]

@@ -1,7 +1,7 @@
 use serde::{Deserialize, Serialize};
 
 /// Data sent along in a start_authentication request
-#[derive(Debug, Serialize, Deserialize, PartialEq, Eq)]
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
 pub struct StartAuthRequest {
     /// Attributes to request from user
     pub attributes: Vec<String>,
@@ -14,7 +14,7 @@ pub struct StartAuthRequest {
 }
 
 /// Result expected from a start_authentication request
-#[derive(Debug, Serialize, Deserialize, PartialEq, Eq)]
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
 pub struct StartAuthResponse {
     /// URL for user to start authentication flow
     pub client_url: String,
